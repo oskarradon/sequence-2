@@ -1,0 +1,25 @@
+<header>
+  
+  <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" id="header-logo">
+
+  <nav role="navigation" id="header-nav">
+    <ul>
+      {% for link in linklists.menu-2.links %}
+        {% if link.links != blank %}
+          <li>
+            <a href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          </li>
+        {% else %}
+          <li>
+            <a href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+
+</header>

@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+
+body {
+	background: #fbf9e9;
+	color: #4f2c04;
+	font: 13px Cambria, Arial, Helvetica, sans-serif;
+	margin: 0;
+}
+
+main {
+  @media screen and (min-width: 940px) {
+    width: 940px;
+    margin: 0 auto;
+  }
+}
+
+// header
+
+#header-logo {
+  width: 195px;
+}
+
+nav ul { // this will be applied to the footer nav also
+  list-style: none;
+}
+
+#header-nav {
+  font-size: 16px;
+  border-bottom: 1px solid grey;
+  @media screen and (min-width: 940px) {
+    border: none;
+  }
+  ul li {
+    &:not(:first-child) {
+      margin-top: 10px;
+    }
+    a {
+      color: grey;
+      text-decoration: none;
+    }
+
+  }
+}
+
+// footer
+
+#footer-logo {
+  width: 100px;
+}
