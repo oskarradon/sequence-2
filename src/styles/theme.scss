@@ -1,5 +1,18 @@
 @charset 'UTF-8';
 
+// variables
+
+$breakpoint: 940px;
+
+// mixins
+
+@mixin media-query {
+	@media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+
 body {
 	background: #fbf9e9;
 	color: #4f2c04;
@@ -9,7 +22,7 @@ body {
 
 main {
   margin: 20px 15px;
-  @media screen and (min-width: 940px) {
+  @include media-query {
     width: 940px;
     margin: 0 auto;
   }
@@ -30,6 +43,10 @@ nav ul { // this will be applied to the footer nav also
 
 // header
 
+header {
+	border-bottom: 1px solid grey;
+}
+
 #header-logo {
   width: 195px;
 }
@@ -37,19 +54,53 @@ nav ul { // this will be applied to the footer nav also
 #header-nav {
   font-size: 16px;
   padding: 10px 0;
-  border-bottom: 1px solid grey;
-  @media screen and (min-width: 940px) {
+  @include media-query {
     border: none;
+		float: right;
+		padding: 20px 0;
   }
   ul li {
     &:not(:first-child) {
       margin-top: 10px;
     }
+		@include media-query {
+			display: inline;
+			a {
+				padding-left: 20px;
+			}
+		}
   }
 }
 
 // footer
 
+footer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-top: 1px solid grey;
+	@include media-query {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
 #footer-logo {
-  width: 100px;
+	width: 120px;
+}
+
+#footer-nav {
+	ul li {
+		display: inline;
+		&:not(:first-child) {
+			padding-left: 20px;
+		}
+  }
+}
+
+#footer-copyright {
+	order: 99;
+	@include media-query {
+		order: 0;
+	}
 }

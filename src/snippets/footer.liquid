@@ -2,6 +2,8 @@
 
   <img src="{{ 'logo.png' | asset_url }}" alt="{{ shop.name }}" id="footer-logo">
 
+  <p id="footer-copyright">&copy; Sequence Press {{ "now" | date: "%Y" }}</p>
+
   <nav role="navigation" id="footer-nav">
     <ul>
       {% for link in linklists.menu-2.links %}
@@ -22,16 +24,10 @@
     </ul>
   </nav>
 
-  <form method="post" action="http://ymlp.com/subscribe.php?id=gmeumbugmgj" target="_blank">
-    <table class="signup" align="center" border="0" cellpadding="5" cellspacing="0">
-      <tbody>
-        <tr>
-          <td colspan="2">Mailing List</td>
-          <td valign="top"><input name="YMP0" size="20" class="singupinput" value="Enter email" onblur="this.value=!this.value?'Enter email':this.value;" onfocus="this.select()" onclick="this.value='';" type="text"></td>
-          <td colspan="2"><input value="Submit" class="signup_submit" type="submit"></td>
-        </tr>
-    </tbody>
-  </table>
+  <form class="" action="http://ymlp.com/subscribe.php?id=gmeumbugmgj" method="post">
+    <label for="Submit">Mailing List</label>
+    <input name="YMP0" value="Enter email" type="text">
+    <button value="Submit" type="submit" name="button">Submit</button>
   </form>
 
 </footer>
