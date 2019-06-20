@@ -28,20 +28,21 @@ main {
   }
 }
 
-nav ul { // this will be applied to the footer nav also
-  list-style: none;
-  margin: 0px;
-  padding: 0px;
-   li a {
-    color: grey;
-    text-decoration: none;
-    &:hover {
-      color: #4f2c04;
-    }
-  }
-}
 
 // header
+
+nav ul { // this will be applied to the footer nav also
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	li a {
+		color: grey;
+		text-decoration: none;
+		&:hover {
+			color: #4f2c04;
+		}
+	}
+}
 
 header {
 	border-bottom: 1px solid grey;
