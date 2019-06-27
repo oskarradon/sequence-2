@@ -96,9 +96,11 @@ footer {
 
 #footer-logo {
 	width: 120px;
+	padding-top: 15px;
 }
 
 #footer-nav {
+	padding-top: 15px;
 	ul li {
 		display: inline;
 		&:not(:first-child) {
@@ -107,9 +109,17 @@ footer {
   }
 }
 
+footer form {
+	padding-top: 15px;
+	label {
+		padding-right: 1px;
+	}
+}
+
 #footer-copyright {
 	order: 99;
 	@include mq {
 		order: 0;
+		padding-top: 15px;
 	}
 }
