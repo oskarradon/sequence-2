@@ -1,0 +1,11 @@
+// variables
+
+$breakpoint: 940px;
+
+// mixins
+
+@mixin mq {
+	@media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}

@@ -1,0 +1,42 @@
+// footer
+
+footer {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	border-top: 1px solid grey;
+	@include mq {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+
+#footer-logo {
+	width: 120px;
+	padding-top: 15px;
+}
+
+#footer-nav {
+	padding-top: 15px;
+	ul li {
+		display: inline;
+		&:not(:first-child) {
+			padding-left: 20px;
+		}
+  }
+}
+
+footer form {
+	padding-top: 15px;
+	label {
+		padding-right: 1px;
+	}
+}
+
+#footer-copyright {
+	order: 99;
+	@include mq {
+		order: 0;
+		padding-top: 15px;
+	}
+}

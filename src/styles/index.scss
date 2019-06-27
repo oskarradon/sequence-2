@@ -1,0 +1,25 @@
+index h1 {
+  color: grey;
+  font-weight: normal;
+}
+
+#index__publications-list {
+  border-top: solid 1px grey;
+  ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    li {
+      padding: 0px;
+
+    }
+  }
+}
+
+.index__publication {
+  max-width: 100px;
+}

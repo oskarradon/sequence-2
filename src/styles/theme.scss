@@ -1,16 +1,6 @@
 @charset 'UTF-8';
 
-// variables
-
-$breakpoint: 940px;
-
-// mixins
-
-@mixin mq {
-	@media screen and (min-width: $breakpoint) {
-    @content;
-  }
-}
+@import "mixins";
 
 
 body {
@@ -28,98 +18,7 @@ main {
   }
 }
 
+@import "header";
+@import "footer";
 
-// header
-
-nav ul { // this will be applied to the footer nav also
-	list-style: none;
-	margin: 0px;
-	padding: 0px;
-	li a {
-		color: grey;
-		text-decoration: none;
-		&:hover {
-			color: #4f2c04;
-		}
-	}
-}
-
-header {
-	border-bottom: 1px solid grey;
-}
-
-#header-logo {
-  width: 195px;
-}
-
-#header-nav {
-  font-size: 16px;
-  padding: 10px 0;
-	@media screen and (min-width: 500px) {
-		margin: 0 auto;
-	}
-  @include mq {
-		padding: 20px 0;
-		float: right;
-  }
-	ul {
-		@media screen and (min-width: 400px) {
-			text-align: center;
-		}
-	}
-  ul li {
-    &:not(:first-child) {
-      margin-top: 10px;
-    }
-		@media screen and (min-width: 400px) {
-			display: inline;
-			margin: 0 auto;
-			&:not(:first-child) {
-				padding-left: 20px;
-	    }
-		}
-  }
-}
-
-// footer
-
-footer {
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-	border-top: 1px solid grey;
-	@include mq {
-		flex-direction: row;
-		justify-content: space-between;
-	}
-}
-
-#footer-logo {
-	width: 120px;
-	padding-top: 15px;
-}
-
-#footer-nav {
-	padding-top: 15px;
-	ul li {
-		display: inline;
-		&:not(:first-child) {
-			padding-left: 20px;
-		}
-  }
-}
-
-footer form {
-	padding-top: 15px;
-	label {
-		padding-right: 1px;
-	}
-}
-
-#footer-copyright {
-	order: 99;
-	@include mq {
-		order: 0;
-		padding-top: 15px;
-	}
-}
+@import "index";
