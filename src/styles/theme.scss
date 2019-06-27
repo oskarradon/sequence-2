@@ -6,7 +6,7 @@ $breakpoint: 940px;
 
 // mixins
 
-@mixin media-query {
+@mixin mq {
 	@media screen and (min-width: $breakpoint) {
     @content;
   }
@@ -22,7 +22,7 @@ body {
 
 main {
   margin: 20px 15px;
-  @include media-query {
+  @include mq {
     width: 940px;
     margin: 0 auto;
   }
@@ -55,17 +55,20 @@ header {
 #header-nav {
   font-size: 16px;
   padding: 10px 0;
-  @include media-query {
-    border: none;
-		float: right;
+	@media screen and (min-width: 500px) {
+		margin: 0 auto;
+	}
+  @include mq {
 		padding: 20px 0;
+		float: right;
   }
   ul li {
     &:not(:first-child) {
       margin-top: 10px;
     }
-		@include media-query {
+		@media screen and (min-width: 400px) {
 			display: inline;
+			margin: 0 auto;
 			a {
 				padding-left: 20px;
 			}
@@ -80,7 +83,7 @@ footer {
 	align-items: center;
 	flex-direction: column;
 	border-top: 1px solid grey;
-	@include media-query {
+	@include mq {
 		flex-direction: row;
 		justify-content: space-between;
 	}
@@ -101,7 +104,7 @@ footer {
 
 #footer-copyright {
 	order: 99;
-	@include media-query {
+	@include mq {
 		order: 0;
 	}
 }
