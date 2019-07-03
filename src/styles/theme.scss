@@ -4,8 +4,8 @@
 
 
 body {
-	background: #fbf9e9;
-	color: #4f2c04;
+	background: $bg-color;
+	color: $text-color;
 	font: 13px Cambria, Arial, Helvetica, sans-serif;
 	margin: 0;
 }
@@ -16,6 +16,14 @@ main {
     width: 940px;
     margin: 0 auto;
   }
+}
+
+a {
+	color: #4f2c04;
+	text-decoration: none;
+	&:hover {
+		color: #7a4406;
+	}
 }
 
 @import "header";
