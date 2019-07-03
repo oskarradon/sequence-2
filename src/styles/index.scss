@@ -1,6 +1,7 @@
 index h1 {
   color: grey;
   font-weight: normal;
+  font-family: "Garamond";
 }
 
 #index__publications-list {
@@ -13,13 +14,32 @@ index h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    li {
-      padding: 0px;
-
+    .index__publication {
+      padding: 0;
+      max-width: 100px;
+      .index__publication--image {
+        max-width: 100%;
+      }
+      h5 {
+        padding: 0;
+        margin: 0;
+      }
+      .index__publication--title, .index__publication--author {
+        font-size: 13px;
+      }
+      .index__publication--title {
+        padding: 10px 0 4px;
+      }
+      .index__publication--author {
+        font-weight: normal;
+        padding-bottom: 16.1833px;
+      }
     }
   }
 }
 
-.index__publication {
-  max-width: 100px;
+
+
+#index__events-postings {
+  border-top: solid 1px grey;
 }
