@@ -1,26 +1,35 @@
 <index>
-  <!-- <section id="index__main-product">
+  <section id="index__main-product">
     <div id="">
       {{ pages.front-page-left-main-area.content }}
     </div>
     <div class="">
 
     </div>
-  </section> -->
+  </section>
 
   <section id="index__publications-list">
     <h1>Publications</h1>
     <ul>
       {% for product in collections.frontpage.products limit:5 %}
-      <li class="index__publication">
-        <img src="{{ product.featured_image | img_url: "medium" }}" alt="">
-        <h5>{{ product.title }}</h5>
-      </li>
+
+        <li class="index__publication">
+          <a class="index__publication--link" href="{{ product.url }}">
+            <img class="index__publication--image" src="{{ product.featured_image | img_url: "medium" }}" alt="">
+            <h5 class="index__publication--title">{{ product.title }}</h5>
+            <h5 class="index__publication--author">By {{ product.vendor }}</h5>
+          </a>
+        </li>
+
       {% endfor %}
     </ul>
   </section>
 
-  <section id="index__events-postings">
+  <!-- <section id="index__events-postings">
+    <h1>Events & Postings</h1>
 
+    {% for and article in blogs.postings.articles %}
+      <p>{{ article.title }}</p>
+    {% endfor %}
   </section>
-</index>
+</index> -->
