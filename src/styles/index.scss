@@ -16,7 +16,7 @@ index h1 {
     justify-content: space-between;
     .index__publication {
       padding: 0;
-      max-width: 100px;
+      max-width: 140px;
       .index__publication--image {
         max-width: 100%;
       }
@@ -42,4 +42,21 @@ index h1 {
 
 #index__events-postings {
   border-top: solid 1px grey;
+}
+
+#index__events-postings--container {
+  border: 1px solid grey;
+  padding: 20px 10px 10px;
+  margin-bottom: 16.1833px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .index__events-postings--article {
+    max-width: 200px;
+    p:first-of-type {
+      margin-top: 0px;
+      padding-top: 0px;
+    }
+  }
 }

@@ -25,11 +25,39 @@
     </ul>
   </section>
 
-  <!-- <section id="index__events-postings">
+  <section id="index__events-postings">
     <h1>Events & Postings</h1>
 
-    {% for and article in blogs.postings.articles %}
-      <p>{{ article.title }}</p>
-    {% endfor %}
+    <div id="index__events-postings--container">
+
+      {% comment %}
+      Reference: https://freakdesign.com.au/blogs/news/105090695-show-the-latest-shopify-articles-from-all-blogs
+      {% endcomment %}
+
+      {% assign featuredBlogs = 'events,postings' | split:',' %}
+      {% assign featuredArticles = false %}
+
+      {% for featuredBlog in featuredBlogs %}
+      {% if blogs[featuredBlog].articles %}
+      {% if featuredArticles %}
+      {% assign featuredArticles = featuredArticles | concat:blogs[featuredBlog].articles %}
+      {% else %}
+      {% assign featuredArticles = blogs[featuredBlog].articles %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+
+      {% if featuredArticles %}
+      {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
+
+      {% for article in featuredArticles limit:5 %}
+      <article class="index__events-postings--article">
+        <p>{{ article.title }}</p>
+        <p>{{ article.excerpt }}</p>
+      </article>
+      {% endfor %}
+
+      {% endif %}
+    </div>
   </section>
-</index> -->
+</index>
