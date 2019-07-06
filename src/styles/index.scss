@@ -2,6 +2,41 @@ index h1 {
   color: grey;
   font-weight: normal;
   font-family: "Garamond";
+  margin-bottom: 1.5em;
+}
+
+#index__highlight-product {
+  @include mq {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+#index__highlight-product--content {
+  max-width: 100vw;
+  img {
+    width: 100%;
+  }
+}
+#index__highlight-product--product a {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 16.1833px;
+  #index__highlight-product--product-image {
+    padding-right: 15px;
+  }
+  #index__highlight-product--title {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0 0 4px;
+  }
+  #index__highlight-product--author {
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
 }
 
 #index__publications-list {
@@ -37,8 +72,6 @@ index h1 {
     }
   }
 }
-
-
 
 #index__events-postings {
   border-top: solid 1px grey;

@@ -1,11 +1,21 @@
 <index>
-  <section id="index__main-product">
-    <div id="">
-      {{ pages.front-page-left-main-area.content }}
+  <section id="index__highlight-product">
+    <div id="index__highlight-product--content">
+      {{ pages.front-page-highlight-image.content }}
     </div>
-    <div class="">
 
-    </div>
+    {% for product in collections.highlight.products limit:1 %}
+      <div id="index__highlight-product--product">
+        <a href="{{ product.url }}">
+          <img id="index__highlight-product--product-image" src="{{ product.featured_image | img_url: "medium" }}" alt="">
+          <div id="index__highlight-product--description">
+            <h5 id="index__highlight-product--title">{{ product.title }}</h5>
+            <h5 id="index__highlight-product--author">By {{ product.vendor }}</h5>
+          </div>
+        </a>
+      </div>
+    {% endfor %}
+
   </section>
 
   <section id="index__publications-list">
@@ -52,8 +62,10 @@
 
       {% for article in featuredArticles limit:5 %}
       <article class="index__events-postings--article">
-        <p>{{ article.title }}</p>
-        <p>{{ article.excerpt }}</p>
+        <a href="{{ article.url }}">
+          <p>{{ article.title }}</p>
+          <p>{{ article.excerpt }}</p>
+        </a>
       </article>
       {% endfor %}
 
