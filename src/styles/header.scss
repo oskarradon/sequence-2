@@ -7,6 +7,9 @@ nav ul { // this will be applied to the footer nav also
 	li a {
 		color: grey;
 		text-decoration: none;
+		font-size: 18px;
+		font-family: adobe-caslon-pro, serif;
+		font-weight: 400;
 		&:hover {
 			color: #4f2c04;
 		}
@@ -26,9 +29,9 @@ header {
 
 #header-nav {
   font-size: 16px;
-	margin: 12px 0;
+	margin: 12px 0 6px;
 	@media screen and (min-width: 400px) {
-		margin: 12px auto;
+		margin: 12px auto 6px;
 	}
   @include mq {
 		padding: 20px 0;
@@ -36,15 +39,15 @@ header {
 		float: right;
   }
 	ul {
-		@media screen and (min-width: 400px) {
+		@media screen and (min-width: 368px) {
 			text-align: center;
 		}
 	}
   ul li {
     &:not(:first-child) {
-      margin-top: 13px;
+      margin-top: 4px;
     }
-		@media screen and (min-width: 400px) {
+		@media screen and (min-width: 368px) {
 			display: inline;
 			margin: 0 auto;
 			&:not(:first-child) {
