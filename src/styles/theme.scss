@@ -8,8 +8,16 @@
 body {
 	background: $bg-color;
 	color: $text-color;
-	font: 13px Cambria, Arial, Helvetica, sans-serif;
+	font: 13px Arial, Helvetica, sans-serif;
 	margin: 0;
+	h1 {
+	  color: grey;
+	  font-size: 22px;
+	  font-weight: normal;
+	  margin: 13px 0 26px;
+		font-family: adobe-caslon-pro, serif;
+		font-weight: 400;
+	}
 }
 
 main {
