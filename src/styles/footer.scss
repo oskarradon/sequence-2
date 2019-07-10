@@ -2,10 +2,12 @@
 
 footer {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 	border-top: 1px solid grey;
 	padding-bottom: 10px;
+	@media screen and (min-width: 368px) {
+		align-items: center;
+	}
 	@include mq {
 		flex-direction: row;
 		justify-content: space-between;
@@ -16,16 +18,19 @@ footer {
 #footer-logo {
 	width: 120px;
 	padding-top: 15px;
+	margin: 0 auto;
 }
 
 #footer-nav {
 	padding-top: 15px;
-	ul li {
-		display: inline;
-		&:not(:first-child) {
-			padding-left: 20px;
+	@media screen and (min-width: 368px) {
+		ul li {
+			display: inline;
+			&:not(:first-child) {
+				padding-left: 20px;
+			}
 		}
-  }
+	}
 }
 
 footer form {
@@ -37,6 +42,7 @@ footer form {
 
 #footer-copyright {
 	order: 99;
+	margin: 13px auto 0;
 	@include mq {
 		order: 0;
 		padding-top: 15px;
