@@ -1,11 +1,3 @@
-index h1 {
-  color: grey;
-  font-size: 22px;
-  font-weight: normal;
-  font-family: "Garamond";
-  margin-bottom: 1.5em;
-}
-
 #index__highlight-product {
   @include mq {
     display: flex;
@@ -20,23 +12,25 @@ index h1 {
     width: 100%;
   }
 }
-#index__highlight-product--product a {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-bottom: 16.1833px;
-  #index__highlight-product--product-image {
-    padding-right: 15px;
-  }
-  #index__highlight-product--title {
-    font-weight: bold;
-    font-size: 15px;
-    margin: 0 0 4px;
-  }
-  #index__highlight-product--author {
-    font-size: 13px;
-    font-weight: normal;
-    margin: 0;
+#index__highlight-product--product {
+  padding: 13px 0 26px;
+  a {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    #index__highlight-product--product-image {
+      padding-right: 15px;
+    }
+    #index__highlight-product--title {
+      font-weight: bold;
+      font-size: 15px;
+      margin: 0 0 4px;
+    }
+    #index__highlight-product--author {
+      font-size: 13px;
+      font-weight: normal;
+      margin: 0;
+    }
   }
 }
 
@@ -52,9 +46,9 @@ index h1 {
     justify-content: space-between;
     .index__publication {
       padding: 0;
-      max-width: 140px;
+      width: 40vw;
       .index__publication--image {
-        max-width: 100%;
+        width: 100%;
       }
       h5 {
         padding: 0;
