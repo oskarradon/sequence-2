@@ -11,20 +11,40 @@
   img {
     width: 100%;
   }
+  @media screen and (min-width: 675px) {
+    max-width: 660px;
+    p:first-child {
+      margin-top: 26px;
+    }
+  }
 }
 #index__highlight-product--product {
   padding: 13px 0 26px;
+  @include mq {
+    padding-top: 26px;
+  }
   a {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+    @include mq {
+      flex-direction: column;
+      margin-left: 25px;
+      width: 254px;
+    }
     #index__highlight-product--product-image {
       padding-right: 15px;
+      @include mq {
+        width: 100%;
+      }
     }
     #index__highlight-product--title {
       font-weight: bold;
       font-size: 15px;
       margin: 0 0 4px;
+      @include mq {
+        margin-top: 26px;
+      }
     }
     #index__highlight-product--author {
       font-size: 13px;
