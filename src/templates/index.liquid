@@ -48,26 +48,26 @@
       {% assign featuredArticles = false %}
 
       {% for featuredBlog in featuredBlogs %}
-      {% if blogs[featuredBlog].articles %}
-      {% if featuredArticles %}
-      {% assign featuredArticles = featuredArticles | concat:blogs[featuredBlog].articles %}
-      {% else %}
-      {% assign featuredArticles = blogs[featuredBlog].articles %}
-      {% endif %}
-      {% endif %}
+        {% if blogs[featuredBlog].articles %}
+          {% if featuredArticles %}
+            {% assign featuredArticles = featuredArticles | concat:blogs[featuredBlog].articles %}
+          {% else %}
+            {% assign featuredArticles = blogs[featuredBlog].articles %}
+          {% endif %}
+        {% endif %}
       {% endfor %}
 
       {% if featuredArticles %}
-      {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
+        {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
 
-      {% for article in featuredArticles limit:5 %}
-      <article class="index__events-postings--article">
-        <a href="{{ article.url }}">
-          <p>{{ article.title }}</p>
-          <p>{{ article.excerpt }}</p>
-        </a>
-      </article>
-      {% endfor %}
+        {% for article in featuredArticles limit:5 %}
+          <article class="index__events-postings--article">
+            <a href="{{ article.url }}">
+              <p>{{ article.title }}</p>
+              <p>{{ article.excerpt }}</p>
+            </a>
+          </article>
+        {% endfor %}
 
       {% endif %}
     </div>
