@@ -7,7 +7,7 @@ $bg-color:   #fbf9e9;
 
 @mixin mq($point) {
 
-  $bp-sm: "(min-width: 600px)";
+  $bp-sm: "(min-width: 440px)";
   $bp-md: "(min-width: 940px)";
   $bp-lg: "(min-width: 1600px)";
 
