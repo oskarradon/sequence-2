@@ -22,7 +22,7 @@ body {
 
 main {
   margin: 20px 15px;
-  @include mq {
+  @include mq(md) {
     width: 940px;
     margin: 0 auto;
   }

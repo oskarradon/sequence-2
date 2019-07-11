@@ -7,20 +7,20 @@ $bg-color:   #fbf9e9;
 
 @mixin mq($point) {
 
-  $bp-sm: "(max-width: 600px)";
-  $bp-md: "(max-width: 940px)";
-  $bp-lg: "(max-width: 1600px)";
+  $bp-sm: "(min-width: 600px)";
+  $bp-md: "(min-width: 940px)";
+  $bp-lg: "(min-width: 1600px)";
 
   @if $point == lg {
-    @media #{$bp-lg} { @content; }
+    @media screen and #{$bp-lg} { @content; }
   }
   @else if $point == md {
-    @media #{$bp-md} { @content; }
+    @media screen and #{$bp-md} { @content; }
   }
   @else if $point == sm {
-    @media #{$bp-sm}  { @content; }
+    @media screen and #{$bp-sm}  { @content; }
   }
 	@else {
-		@media #{$point}  { @content; }
+		@media screen and (min-width: #{$point})  { @content; }
 	}
 }

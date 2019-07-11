@@ -1,5 +1,5 @@
 #index__highlight-product {
-  @include mq {
+  @include mq(md) {
     display: flex; // refactor mq mixin, implement css grid
     flex-direction: row;
     justify-content: space-between;
@@ -11,7 +11,7 @@
   img {
     width: 100%;
   }
-  @media screen and (min-width: 675px) {
+  @include mq(675px) {
     max-width: 660px;
     p:first-child {
       margin-top: 26px;
@@ -20,14 +20,14 @@
 }
 #index__highlight-product--product {
   padding: 13px 0 26px;
-  @include mq {
+  @include mq(md) {
     padding-top: 26px;
   }
   a {
     display: flex; // could use float here?
     flex-direction: row;
     justify-content: flex-start;
-    @include mq {
+    @include mq(md) {
       flex-direction: column;
       margin-left: 25px;
       width: 254px;
@@ -36,7 +36,7 @@
       padding-right: 15px;
       flex-shrink: 0;
       max-width: 150px;
-      @include mq {
+      @include mq(md) {
         width: 100%;
       }
     }
@@ -44,7 +44,7 @@
       font-weight: bold;
       font-size: 15px;
       margin: 0 0 4px;
-      @include mq {
+      @include mq(md) {
         margin-top: 26px;
       }
     }
@@ -65,10 +65,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 26px 26px;
-    @media screen and (min-width: 450px) {
+    @include mq(450px) {
       grid-template-columns: 1fr 1fr 1fr;
     }
-    @media screen and (min-width: 800px) {
+    @include mq(800px) {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
     .index__publication {

@@ -18,7 +18,7 @@ nav ul { // this will be applied to the footer nav also
 
 header {
 	border-bottom: 1px solid grey;
-	@include mq {
+	@include mq(md) {
 		padding: 10px 0;
 	}
 }
@@ -30,16 +30,16 @@ header {
 #header-nav {
   font-size: 16px;
 	margin: 12px 0 6px;
-	@media screen and (min-width: 400px) {
+	@include mq(400px) {
 		margin: 12px auto 6px;
 	}
-  @include mq {
+  @include mq(md) {
 		padding: 20px 0;
 		margin: 0;
 		float: right;
   }
 	ul {
-		@media screen and (min-width: 368px) {
+		@include mq(368px) {
 			text-align: center;
 		}
 	}
@@ -47,7 +47,7 @@ header {
     &:not(:first-child) {
       margin-top: 4px;
     }
-		@media screen and (min-width: 368px) {
+		@include mq(368px) {
 			display: inline;
 			margin: 0 auto;
 			&:not(:first-child) {
