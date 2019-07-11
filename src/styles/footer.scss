@@ -29,12 +29,20 @@ footer {
 			&:not(:first-child) {
 				padding-left: 20px;
 			}
+			@include mq(md) {
+				a {
+					font-size: 16px;
+				}
+			}
 		}
 	}
 }
 
 footer form {
 	padding-top: 15px;
+	@include mq(md) {
+		padding-top: 11px;
+	}
 	label {
 		padding-right: 1px;
 	}
@@ -45,6 +53,7 @@ footer form {
 	margin: 13px auto 0;
 	@include mq(md) {
 		order: 0;
-		padding-top: 15px;
+		padding-top: 11px;
+		margin: 0;
 	}
 }
