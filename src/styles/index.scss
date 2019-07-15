@@ -8,7 +8,10 @@
 
 #index__highlight-product--content {
   max-width: 100vw;
-  padding-top: 129px;
+  padding-top: 202px;
+  @include mq(sm) {
+    padding-top: 129px;
+  }
   img {
     width: 100%;
   }
