@@ -23,9 +23,17 @@ header {
 	padding: 15px 0 0 0;
 	margin-right: 15px;
 	width: calc(100% - 30px);
+	a #header-logo {
+		transition: all .5s ease-in-out;
+	}
 	@include mq(md) {
 		padding: 10px 0;
 	}
+}
+
+.shrink a #header-logo {
+	width: 130px;
+ transition: all .5s ease-in-out;
 }
 
 #header-logo {
