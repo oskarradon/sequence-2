@@ -20,7 +20,9 @@ header {
 	border-bottom: 1px solid grey;
 	position: fixed;
 	background: $bg-color;
-	padding: 15px 20px 0 0;
+	padding: 15px 0 0 0;
+	margin-right: 15px;
+	width: calc(100% - 30px);
 	@include mq(md) {
 		padding: 10px 0;
 	}
