@@ -27,24 +27,27 @@ header {
 		transition: all .5s ease-in-out;
 	}
 	@include mq(md) {
-		padding: 10px 0;
+		padding: 15px 0;
+		margin: 0 auto;
+		width: 940px;
 	}
 }
 
 .shrink a #header-logo {
 	width: 130px;
- transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 
 #header-logo {
   width: 195px;
+	margin-bottom: 13px;
 }
 
 #header-nav {
   font-size: 16px;
-	margin: 12px 0 6px;
+	margin-bottom: 6px;
 	@include mq(400px) {
-		margin: 12px auto 6px;
+		margin: 0 auto 6px;
 	}
   @include mq(md) {
 		padding: 20px 0;
@@ -52,7 +55,7 @@ header {
 		float: right;
   }
 	ul {
-		@include mq(368px) {
+		@include mq(sm) {
 			text-align: center;
 		}
 	}
@@ -60,7 +63,7 @@ header {
     &:not(:first-child) {
       margin-top: 4px;
     }
-		@include mq(368px) {
+		@include mq(sm) {
 			display: inline;
 			margin: 0 auto;
 			&:not(:first-child) {
