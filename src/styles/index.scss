@@ -8,8 +8,12 @@
 
 #index__highlight-product--content {
   max-width: 100vw;
+  padding-top: 142px;
   img {
     width: 100%;
+  }
+  &:first-child {
+    margin-top: 0;
   }
   @include mq(675px) {
     max-width: 660px;
@@ -89,7 +93,6 @@
       }
       .index__publication--author {
         font-weight: normal;
-        padding-bottom: 16.1833px;
       }
     }
   }
@@ -97,12 +100,13 @@
 
 #index__events-postings {
   border-top: solid 1px grey;
+  margin-top: 26px;
 }
 
 #index__events-postings--container {
   border: 1px solid grey;
   padding: 20px 10px 10px;
-  margin-bottom: 16.1833px;
+  margin-bottom: 26px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 26px 26px;

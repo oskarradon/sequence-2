@@ -18,6 +18,9 @@ nav ul { // this will be applied to the footer nav also
 
 header {
 	border-bottom: 1px solid grey;
+	position: fixed;
+	background: $bg-color;
+	padding: 15px 20px 0 0;
 	@include mq(md) {
 		padding: 10px 0;
 	}

@@ -9,7 +9,6 @@ body {
 	background: $bg-color;
 	color: $text-color;
 	font: 13px Arial, Helvetica, sans-serif;
-	margin: 0;
 	h1 {
 	  color: grey;
 	  font-size: 22px;
@@ -21,7 +20,7 @@ body {
 }
 
 main {
-  margin: 20px 15px;
+  margin: 0 15px;
   @include mq(md) {
     width: 940px;
     margin: 0 auto;
