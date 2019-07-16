@@ -22,12 +22,11 @@
 </head>
 
 <body>
+  {% include 'header' %}
   <main>
-    {% include 'header' %}
-
     {{ content_for_layout }}
-    {% include 'footer' %}
   </main>
+  {% include 'footer' %}
 
 </body>
 </html>
