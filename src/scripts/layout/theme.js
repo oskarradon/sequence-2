@@ -17,6 +17,18 @@ $(document).on("scroll", function(){
 
 // menu button on tiny phones like iphone 3/4
 
-// if ($(window).width() < 368) {
-// 	$("#header-nav").hide();
-// }
+if ($(window).width() < 368) {
+	$("#header-nav").hide();
+
+	$("#menu-button").click(() => {
+		if (!$("#header-nav").hasClass('visible')) {
+			$("#header-nav").show();
+			$("#header-nav").addClass('visible');
+			$("#menu-button").text("X");
+		} else {
+			$("#header-nav").hide();
+			$("#header-nav").removeClass('visible');
+			$("#menu-button").text("Menu");
+		}
+	});
+}
