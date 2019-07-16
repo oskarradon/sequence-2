@@ -3,7 +3,7 @@ import "../../styles/theme.scss.liquid";
 
 // make header logo smaller on scroll to keep out of view
 
-$(document).on("scroll", function(){
+$(document).on("scroll", () => {
 		if
       (($(window).width() < 940) && ($(document).scrollTop() > 50)){
 		      $("header").addClass("shrink");
