@@ -16,6 +16,10 @@ nav ul { // this will be applied to the footer nav also
 	}
 }
 
+#container {
+	width: 100vw;
+}
+
 header {
 	border-bottom: 1px solid grey;
 	position: fixed;
@@ -27,8 +31,9 @@ header {
 		transition: all .5s ease-in-out;
 	}
 	@include mq(md) {
-		padding: 15px 0;
-		margin: 0 auto;
+		padding: 15px 0 0 0;
+		margin-left: -470px;
+		left: 50%;
 		width: 940px;
 	}
 }
@@ -62,17 +67,19 @@ header {
 	&:hover{
 		cursor: pointer; // not rly necessary lol but idk
 	}
+	@include mq(sm) {
+		display: none;
+	}
 }
 
 #header-nav {
   font-size: 16px;
 	margin-bottom: 6px;
-	transition: all .5s ease-in-out;
 	@include mq(400px) {
 		margin: 0 auto 6px;
 	}
   @include mq(md) {
-		padding: 20px 0;
+		padding: 18px 0;
 		margin: 0;
 		float: right;
   }
