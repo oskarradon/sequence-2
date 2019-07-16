@@ -1,75 +1,74 @@
-<index>
-  <section id="index__highlight-product">
-    <div id="index__highlight-product--content">
-      {{ pages.front-page-highlight-image.content }}
-    </div>
 
-    {% for product in collections.highlight.products limit:1 %}
-      <div id="index__highlight-product--product">
-        <a href="{{ product.url }}">
-          <img id="index__highlight-product--product-image" src="{{ product.featured_image | img_url: "medium" }}" alt="">
-          <div id="index__highlight-product--description">
-            <h5 id="index__highlight-product--title">{{ product.title }}</h5>
-            <h5 id="index__highlight-product--author">By {{ product.vendor }}</h5>
-          </div>
+<section id="index__highlight-product">
+  <div id="index__highlight-product--content">
+    {{ pages.front-page-highlight-image.content }}
+  </div>
+
+  {% for product in collections.highlight.products limit:1 %}
+    <div id="index__highlight-product--product">
+      <a href="{{ product.url }}">
+        <img id="index__highlight-product--product-image" src="{{ product.featured_image | img_url: "medium" }}" alt="">
+        <div id="index__highlight-product--description">
+          <h5 id="index__highlight-product--title">{{ product.title }}</h5>
+          <h5 id="index__highlight-product--author">By {{ product.vendor }}</h5>
+        </div>
+      </a>
+    </div>
+  {% endfor %}
+
+</section>
+
+<section id="index__publications-list">
+  <h1>Publications</h1>
+  <ul>
+    {% for product in collections.frontpage.products limit:5 %}
+
+      <li class="index__publication">
+        <a class="index__publication--link" href="{{ product.url }}">
+          <img class="index__publication--image" src="{{ product.featured_image | img_url: "medium" }}" alt="">
+          <h5 class="index__publication--title">{{ product.title }}</h5>
+          <h5 class="index__publication--author">By {{ product.vendor }}</h5>
         </a>
-      </div>
+      </li>
+
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="index__events-postings">
+  <h1>Events & Postings</h1>
+
+  <div id="index__events-postings--container">
+
+    {% comment %}
+    Reference: https://freakdesign.com.au/blogs/news/105090695-show-the-latest-shopify-articles-from-all-blogs
+    {% endcomment %}
+
+    {% assign featuredBlogs = 'events,postings' | split:',' %}
+    {% assign featuredArticles = false %}
+
+    {% for featuredBlog in featuredBlogs %}
+      {% if blogs[featuredBlog].articles %}
+        {% if featuredArticles %}
+          {% assign featuredArticles = featuredArticles | concat:blogs[featuredBlog].articles %}
+        {% else %}
+          {% assign featuredArticles = blogs[featuredBlog].articles %}
+        {% endif %}
+      {% endif %}
     {% endfor %}
 
-  </section>
+    {% if featuredArticles %}
+      {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
 
-  <section id="index__publications-list">
-    <h1>Publications</h1>
-    <ul>
-      {% for product in collections.frontpage.products limit:5 %}
-
-        <li class="index__publication">
-          <a class="index__publication--link" href="{{ product.url }}">
-            <img class="index__publication--image" src="{{ product.featured_image | img_url: "medium" }}" alt="">
-            <h5 class="index__publication--title">{{ product.title }}</h5>
-            <h5 class="index__publication--author">By {{ product.vendor }}</h5>
+      {% for article in featuredArticles limit:5 %}
+        <article class="index__events-postings--article">
+          <a href="{{ article.url }}">
+            <p>{{ article.title }}</p>
+            <p>{{ article.excerpt }}</p>
           </a>
-        </li>
-
-      {% endfor %}
-    </ul>
-  </section>
-
-  <section id="index__events-postings">
-    <h1>Events & Postings</h1>
-
-    <div id="index__events-postings--container">
-
-      {% comment %}
-      Reference: https://freakdesign.com.au/blogs/news/105090695-show-the-latest-shopify-articles-from-all-blogs
-      {% endcomment %}
-
-      {% assign featuredBlogs = 'events,postings' | split:',' %}
-      {% assign featuredArticles = false %}
-
-      {% for featuredBlog in featuredBlogs %}
-        {% if blogs[featuredBlog].articles %}
-          {% if featuredArticles %}
-            {% assign featuredArticles = featuredArticles | concat:blogs[featuredBlog].articles %}
-          {% else %}
-            {% assign featuredArticles = blogs[featuredBlog].articles %}
-          {% endif %}
-        {% endif %}
+        </article>
       {% endfor %}
 
-      {% if featuredArticles %}
-        {% assign featuredArticles = featuredArticles | sort:'published_at' | reverse %}
-
-        {% for article in featuredArticles limit:5 %}
-          <article class="index__events-postings--article">
-            <a href="{{ article.url }}">
-              <p>{{ article.title }}</p>
-              <p>{{ article.excerpt }}</p>
-            </a>
-          </article>
-        {% endfor %}
-
-      {% endif %}
-    </div>
-  </section>
-</index>
+    {% endif %}
+  </div>
+</section>
