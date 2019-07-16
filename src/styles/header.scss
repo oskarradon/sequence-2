@@ -33,9 +33,15 @@ header {
 	}
 }
 
+// used to animate header logo on scroll using js
 .shrink a #header-logo {
 	width: 130px;
   transition: all .5s ease-in-out;
+}
+
+.shrink #menu-button {
+	top: 30px;
+	transition: all .5s ease-in-out;
 }
 
 #header-logo {
@@ -43,9 +49,25 @@ header {
 	margin-bottom: 13px;
 }
 
+#menu-button {
+	font-family: adobe-caslon-pro, serif;
+	color: grey;
+	background: none;
+	border: none;
+	font-size: 18px;
+	position: absolute;
+	right: 0;
+	top: 40px;
+	transition: all .5s ease-in-out;
+	&:hover{
+		cursor: pointer; // not rly necessary lol but idk
+	}
+}
+
 #header-nav {
   font-size: 16px;
 	margin-bottom: 6px;
+	transition: all .5s ease-in-out;
 	@include mq(400px) {
 		margin: 0 auto 6px;
 	}
