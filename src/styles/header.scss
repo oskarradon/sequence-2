@@ -36,6 +36,10 @@ header {
 		left: 50%;
 		width: 940px;
 	}
+	@include mq(lg) {
+		width: 1200px;
+		margin-left: -600px;
+	}
 }
 
 // used to animate header logo on scroll using js
@@ -100,4 +104,17 @@ header {
 	    }
 		}
   }
+}
+
+// this fixes the text bottom spacing on chrome
+// sorry im using !important 😓
+
+.chrome-nav {
+	@include mq(sm) {
+		margin-bottom: 16px !important;
+	}
+	@include mq(md) {
+		padding-top: 20px !important;
+		margin-bottom: 0 !important;
+	}
 }
