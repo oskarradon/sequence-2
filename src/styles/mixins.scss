@@ -3,24 +3,34 @@
 $text-color: #4f2c04;
 $bg-color:   #fbf9e9;
 
+// units
+
+$spacing-unit: 13px;
+
+$u1: $spacing-unit;
+$u2: calc(2 * #{$spacing-unit});
+$u3: calc(3 * #{$spacing-unit});
+$u4: calc(4 * #{$spacing-unit});
+$u5: calc(5 * #{$spacing-unit});
+
 // mixins
 
 @mixin mq($point) {
 
   $bp-sm: "(min-width: 368px)";
   $bp-md: "(min-width: 980px)";
-  $bp-lg: "(min-width: 1600px)";
+  $bp-lg: "(min-width: 1230px)";
 
   @if $point == lg {
-    @media screen and #{$bp-lg} { @content; }
+    @media #{$bp-lg} { @content; }
   }
   @else if $point == md {
-    @media screen and #{$bp-md} { @content; }
+    @media #{$bp-md} { @content; }
   }
   @else if $point == sm {
-    @media screen and #{$bp-sm}  { @content; }
+    @media #{$bp-sm}  { @content; }
   }
 	@else {
-		@media screen and (min-width: #{$point})  { @content; }
+		@media (min-width: #{$point})  { @content; }
 	}
 }
