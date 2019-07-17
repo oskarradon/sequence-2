@@ -26,10 +26,13 @@ main {
 		padding-top: 143px;
 	}
   @include mq(md) {
-		padding-top: 105px;
+		padding-top: calc(89px + #{$u2});
     width: 940px;
     margin: 0 auto;
   }
+	@include mq(lg) {
+		width: 1200px;
+	}
 }
 
 a {
