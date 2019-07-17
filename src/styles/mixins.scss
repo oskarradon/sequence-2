@@ -1,20 +1,3 @@
-// variables
-
-$text-color: #4f2c04;
-$bg-color:   #fbf9e9;
-
-// units
-
-$spacing-unit: 13px;
-
-$u1: $spacing-unit;
-$u2: calc(2 * #{$spacing-unit});
-$u3: calc(3 * #{$spacing-unit});
-$u4: calc(4 * #{$spacing-unit});
-$u5: calc(5 * #{$spacing-unit});
-
-// mixins
-
 @mixin mq($point) {
 
   $bp-sm: "(min-width: 368px)";
