@@ -1,57 +1,48 @@
 #index__highlight-product {
-  @include mq(md) {
-    display: flex; // implement css grid
-    flex-direction: row;
-    justify-content: space-between;
+  @include mq(sm) {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-column-gap: $u2;
+  }
+  @include mq(lg) {
+    grid-column-gap: $u3;
   }
 }
 
 #index__highlight-product--content {
   max-width: 100vw;
-  padding-top: 202px;
-  @include mq(sm) {
-    padding-top: 129px;
-  }
   img {
     width: 100%;
   }
-  &:first-child {
+  p:first-child {
     margin-top: 0;
-  }
-  @include mq(675px) {
-    max-width: 660px;
-    p:first-child {
-      margin-top: 26px;
-    }
   }
 }
 #index__highlight-product--product {
-  padding: 13px 0 26px;
-  @include mq(md) {
-    padding-top: 26px;
-  }
   a {
+    padding: 13px 0 26px;
     display: flex; // could use float here?
     flex-direction: row;
     justify-content: flex-start;
-    @include mq(md) {
+    @include mq(sm) {
       flex-direction: column;
-      margin-left: 25px;
-      width: 254px;
+      padding: 0;
     }
     #index__highlight-product--product-image {
       padding-right: 15px;
       flex-shrink: 0;
-      max-width: 150px;
-      @include mq(md) {
+      width: 150px;
+      @include mq(sm) {
         width: 100%;
+        height: auto;
+        padding: 0;
       }
     }
     #index__highlight-product--title {
       font-weight: bold;
       font-size: 15px;
       margin: 0 0 4px;
-      @include mq(md) {
+      @include mq(sm) {
         margin-top: 26px;
       }
     }
