@@ -15,17 +15,14 @@ body {
 	  color: grey;
 	  font-size: 22px;
 	  font-weight: normal;
-	  margin: 13px 0 26px;
+	  margin: $u1 0 $u3;
 		font-family: adobe-caslon-pro, serif;
 		font-weight: 400;
 	}
 }
 
 main {
-	padding-top: 104px;
-	@include mq(sm) {
-		padding-top: 143px;
-	}
+	padding-top: calc(85px + #{$u2});
   @include mq(md) {
 		padding-top: calc(89px + #{$u2});
     width: 940px;
