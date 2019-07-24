@@ -5,5 +5,5 @@ If styles are not being applied, u need to create a new SSL certificate. [Click 
 
 TO_DO:
 
-- [ ] xl screen sizes?
+- [x] xl screen sizes?
 - [ ] use one events and postings blog and use tags to separate
