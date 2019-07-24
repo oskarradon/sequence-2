@@ -15,7 +15,7 @@ $(document).on("scroll", () => {
 
 function headerMenu() {
 	let windowWidth = $(window).width();
-	if ((windowWidth < 368) && (!$("#header-nav").hasClass('visible'))) {
+	if ((windowWidth < 980) && (!$("#header-nav").hasClass('visible'))) {
 		$("#header-nav").hide();
 
 		$("#menu-button").click(() => {
