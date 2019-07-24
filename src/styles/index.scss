@@ -17,6 +17,12 @@
   p:first-child {
     margin-top: 0;
   }
+  p:nth-of-type(2) {
+    margin-top: $u2;
+  }
+  p:last-of-type {
+    margin-bottom: $u2;
+  }
 }
 #index__highlight-product--product {
   a {
@@ -43,7 +49,7 @@
       font-size: 15px;
       margin: 0 0 4px;
       @include mq(sm) {
-        margin-top: 26px;
+        margin-top: $u2;
       }
     }
     #index__highlight-product--author {
@@ -100,7 +106,6 @@
 #index__events-postings--container {
   border: 1px solid grey;
   padding: 20px 10px 10px;
-  margin-bottom: 26px;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 26px 26px;
