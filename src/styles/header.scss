@@ -71,7 +71,7 @@ header {
 	&:hover{
 		cursor: pointer; // not rly necessary lol but idk
 	}
-	@include mq(sm) {
+	@include mq(md) {
 		display: none;
 	}
 }
