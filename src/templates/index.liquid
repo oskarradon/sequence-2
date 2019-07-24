@@ -7,7 +7,7 @@
   {% for product in collections.highlight.products limit:1 %}
     <div id="index__highlight-product--product">
       <a href="{{ product.url }}">
-        <img id="index__highlight-product--product-image" src="{{ product.featured_image | img_url: "medium" }}" alt="">
+        <img id="index__highlight-product--product-image" src="{{ product.featured_image | img_url: "large" }}" alt="">
         <div id="index__highlight-product--description">
           <h5 id="index__highlight-product--title">{{ product.title }}</h5>
           <h5 id="index__highlight-product--author">By {{ product.vendor }}</h5>
@@ -25,7 +25,7 @@
 
       <li class="index__publication">
         <a class="index__publication--link" href="{{ product.url }}">
-          <img class="index__publication--image" src="{{ product.featured_image | img_url: "medium" }}" alt="">
+          <img class="index__publication--image" src="{{ product.featured_image | img_url: "large" }}" alt="">
           <h5 class="index__publication--title">{{ product.title }}</h5>
           <h5 class="index__publication--author">By {{ product.vendor }}</h5>
         </a>
