@@ -4,16 +4,15 @@ footer {
 	display: flex;
 	flex-direction: column;
 	border-top: 1px solid grey;
-	padding-bottom: 26px;
+	margin-bottom: $u2;
 	@include mq(368px) {
 		align-items: center;
 	}
 	@include mq(md) {
 		flex-direction: row;
 		justify-content: space-between;
-		padding-bottom: 30px;
 		width: 940px;
-		margin: 0 auto;
+		margin: $u4 auto;
 	}
 	@include mq(lg) {
 		width: 1200px;
