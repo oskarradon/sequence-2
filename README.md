@@ -1,5 +1,4 @@
 ## Sequence Press Shopify Theme
-#### 2019
 
 Based off of the Slate Skeleton theme :)
 
