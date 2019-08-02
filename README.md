@@ -1,4 +1,7 @@
-Based off of Slate Skeleton theme :)
+## Sequence Press Shopify Theme
+#### 2019
+
+Based off of the Slate Skeleton theme :)
 
 If styles are not being applied, u need to create a new SSL certificate. [Click here](https://shopify.github.io/slate/docs/create-a-self-signed-ssl-certificate) or run this in your terminal before running `npm start`:
 
@@ -50,7 +53,7 @@ function ssl-check() {
 ```
 
 
-TO_DO:
+## TO DO:
 
 - [x] xl screen sizes?
 - [ ] use one events and postings blog and use tags to separate
