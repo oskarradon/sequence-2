@@ -56,3 +56,4 @@ function ssl-check() {
 
 - [x] xl screen sizes?
 - [ ] use one events and postings blog and use tags to separate
+- [ ] implement sass partials based on page type instead of having everything in one big stylesheet aka best practices :)
