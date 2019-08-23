@@ -68,12 +68,16 @@
     padding: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 26px 26px;
-    @include mq(sm) {
+    grid-gap: $u3 $u3;
+    @include mq(600px) {
       grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: $u5 $u5;
     }
-    @include mq(800px) {
+    @include mq(md) {
       grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+    @include mq(lg) {
+      grid-gap: $u7 $u7;
     }
     .index__publication {
       padding: 0;

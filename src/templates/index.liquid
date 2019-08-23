@@ -36,13 +36,14 @@
 </section>
 
 <section id="index__events-postings">
-  <h1>Events & Postings</h1>
+  <a href="#"><h1>Events & Postings</h1></a>
+
 
   <div id="index__events-postings--container">
 
-    {% comment %}
-    Reference: https://freakdesign.com.au/blogs/news/105090695-show-the-latest-shopify-articles-from-all-blogs
-    {% endcomment %}
+  {% comment %}
+  Reference: https://freakdesign.com.au/blogs/news/105090695-show-the-latest-shopify-articles-from-all-blogs
+  {% endcomment %}
 
     {% assign featuredBlogs = 'events,postings' | split:',' %}
     {% assign featuredArticles = false %}
@@ -62,13 +63,10 @@
 
       {% for article in featuredArticles limit:5 %}
         <article class="index__events-postings--article">
-          <a href="{{ article.url }}">
-            <p>{{ article.title }}</p>
-            <p>{{ article.excerpt }}</p>
-          </a>
+          <p>{{ article.title }}</p>
+          <p>{{ article.content }}</p>
         </article>
       {% endfor %}
-
     {% endif %}
   </div>
 </section>
