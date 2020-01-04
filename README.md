@@ -4,13 +4,13 @@
 A simple Shopify theme based off of the Skeleton theme.
 
 #### Installation:
-1. Install xcode from App Store
+1. Install xcode from App Store.
 2. [Install homebrew & node](https://blog.teamtreehouse.com/install-node-js-npm-mac) tl;dr: ``` ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" ``` and ``` brew install node ```
 3. ``` npm install ```
 4. Create ``` .env ``` file using [this template](https://shopify.github.io/slate/docs/connect-to-your-store), and create a private app through the admin panel using those same instructions
 5. These next instructions are for generating SSL certificates to fix a problem where styles weren't loading and my browser was throwing "Potential Security RISK!!!" warnings and are from [this issue](https://github.com/Shopify/slate/issues/726#issuecomment-425675011):
 6. ``` brew install mkcert``` and ``` mkcert install ```
-7. In a perfect world add this to your ``` .bash_profile ``` or just copy & paste (I know, I know D.R.Y.) each time u open the project
+7. In a perfect world add this to your ``` .bash_profile ``` or just copy & paste (I know, I know D.R.Y.) each time you open the project:
 ```bash
   function ssl-check() {
     f=~/.localhost_ssl;
@@ -58,14 +58,14 @@ A simple Shopify theme based off of the Skeleton theme.
 }
 ```
 8. Then run ``` ssl-check ```
-9. Run ``` npm start ``` to spin up an Express server with the development theme
+9. Run ``` npm start ``` to spin up an Express server with the development theme.
 
 
 #### Credits:
-Thank you to Slate, the developer of the first Sequence Press theme, and Github.
+Thank you to the developers who made Slate, the developer of the first Sequence Press theme, the people who invented git, Github, Mozilla, all people who developed the npm packages this runs with, my teachers at Epicodus, my family, my girlfriend, my friends, Tim Berners-Lee, Alan Turing, Ada Lovelace, mother Earth. 
 
 #### License:
-Not freeware
+Not freeware, not sure what license.
 
 #### To-do:
 
