@@ -1,5 +1,5 @@
 ##### Project name:
-## Sequence Press Shopify Theme
+#### Sequence Press Shopify Theme
 
 ##### Description:
 
