@@ -1,9 +1,12 @@
-##### Project name:
 #### Sequence Press Shopify Theme
 
 ##### Description:
+A simple Shopify theme based off of the Skeleton theme.
 
 ##### Installation:
+
+1. Install xcode
+2. ```bash npm install homebrew ```
 
 ##### Usage: The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
 
