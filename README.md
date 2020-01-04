@@ -1,17 +1,16 @@
-#### Sequence Press Shopify Theme
+### Sequence Press Shopify Theme
 
-##### Description:
+#### Description:
 A simple Shopify theme based off of the Skeleton theme.
 
-##### Installation:
-
+#### Installation:
 1. Install xcode from App Store
 2. [Install homebrew & node](https://blog.teamtreehouse.com/install-node-js-npm-mac) tl;dr: ``` ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" ``` and ``` brew install node ```
 3. ``` npm install ```
 4. Create ``` .env ``` file using [this template](https://shopify.github.io/slate/docs/connect-to-your-store), and create a private app through the admin panel using those same instructions
 5. These next instructions are for generating SSL certificates to fix a problem where styles weren't loading and my browser was throwing "Potential Security RISK!!!" warnings and are from [this issue](https://github.com/Shopify/slate/issues/726#issuecomment-425675011):
 6. ``` brew install mkcert``` and ``` mkcert install ```
-7.
+7. In a perfect world add this to your ``` .bash_profile ``` or just copy & paste (I know, I know D.R.Y.) each time u open the project
 ```bash
   function ssl-check() {
     f=~/.localhost_ssl;
@@ -62,13 +61,13 @@ A simple Shopify theme based off of the Skeleton theme.
 9. Run ``` npm start ``` to spin up an Express server with the development theme
 
 
-##### Credits:
+#### Credits:
 Thank you to Slate, the developer of the first Sequence Press theme, and Github.
 
-##### License:
+#### License:
 Not freeware
 
-##### TO DO:
+#### To-do:
 
 - [x] xl screen sizes?
 - [ ] use one events and postings blog and use tags to separate
