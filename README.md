@@ -62,7 +62,7 @@ A simple Shopify theme based off of the Skeleton theme.
 
 
 #### Credits:
-Thank you to the developers who made Slate, the developer of the first Sequence Press theme, the people who invented git, Github, Mozilla, all people who developed the npm packages this runs with, my teachers at Epicodus, my family, my girlfriend, my friends, Tim Berners-Lee, Alan Turing, Ada Lovelace, mother Earth. 
+Thank you to the developers who made Slate, the developer of the first Sequence Press theme, the people who invented git, Github, Mozilla, all people who developed the npm packages this runs with, my teachers at Epicodus, my family, my girlfriend, my friends, Tim Berners-Lee, Alan Turing, Ada Lovelace, Mother Earth. 
 
 #### License:
 Not freeware, not sure what license.
