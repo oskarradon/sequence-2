@@ -1,8 +1,21 @@
+##### Project name:
 ## Sequence Press Shopify Theme
 
-Based off of the Slate Skeleton theme :)
+##### Description:
 
-If styles are not being applied, u need to create a new SSL certificate. [Click here](https://shopify.github.io/slate/docs/create-a-self-signed-ssl-certificate) or run this in your terminal before running `npm start`:
+##### Installation:
+
+##### Usage: The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+
+##### Credits: Include a section for credits in order to highlight and link to the authors of your project.
+
+##### License: Finally, include a section for the license of your project. For more information on choosing a license, check out GitHub’s licensing guide!
+
+
+Step 1: Install NPM, Xcode, etc.
+
+Step 2:  
+ [Click here](https://shopify.github.io/slate/docs/create-a-self-signed-ssl-certificate) or run this in your terminal before running `npm start`:
 
 ```bash
 function ssl-check() {
