@@ -5,22 +5,13 @@ A simple Shopify theme based off of the Skeleton theme.
 
 ##### Installation:
 
-1. Install xcode
-2. ```bash npm install homebrew ```
-
-##### Usage: The next section is usage, in which you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
-
-##### Credits: Include a section for credits in order to highlight and link to the authors of your project.
-
-##### License: Finally, include a section for the license of your project. For more information on choosing a license, check out GitHub’s licensing guide!
-
-
-Step 1: Install NPM, Xcode, etc.
-
-Step 2:  
- [Click here](https://shopify.github.io/slate/docs/create-a-self-signed-ssl-certificate) or run this in your terminal before running `npm start`:
-
-```bash
+1. Install xcode from App Store
+2. [Install homebrew & node](https://blog.teamtreehouse.com/install-node-js-npm-mac) tl;dr: ``` ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" ``` and ``` brew install node ```
+3. ``` npm install ```
+4. create ``` .env ``` file using [this template](https://shopify.github.io/slate/docs/connect-to-your-store), and create a private app through the admin panel using those same instructions
+5. These next instructions are for generating SSL certificates to fix a problem where styles weren't loading and my browser was throwing "Potential Security RISK!!!" warnings and are from [this issue](https://github.com/Shopify/slate/issues/726#issuecomment-425675011):
+6. ``` brew install mkcert``` and ``` mkcert install ```
+7. ```bash
 function ssl-check() {
     f=~/.localhost_ssl;
     ssl_crt=$f/server.crt
@@ -66,9 +57,17 @@ function ssl-check() {
     fi
 }
 ```
+then run ``` ssl-check ```
+8. Run ``` npm start ``` to spin up an Express server with the development theme
 
 
-## TO DO:
+##### Credits:
+Thank you to Slate, the developer of the first Sequence Press theme, and Github.
+
+##### License:
+Not freeware
+
+##### TO DO:
 
 - [x] xl screen sizes?
 - [ ] use one events and postings blog and use tags to separate
