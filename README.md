@@ -11,8 +11,9 @@ A simple Shopify theme based off of the Skeleton theme.
 4. create ``` .env ``` file using [this template](https://shopify.github.io/slate/docs/connect-to-your-store), and create a private app through the admin panel using those same instructions
 5. These next instructions are for generating SSL certificates to fix a problem where styles weren't loading and my browser was throwing "Potential Security RISK!!!" warnings and are from [this issue](https://github.com/Shopify/slate/issues/726#issuecomment-425675011):
 6. ``` brew install mkcert``` and ``` mkcert install ```
-7. ```bash
-function ssl-check() {
+7.
+```bash
+  function ssl-check() {
     f=~/.localhost_ssl;
     ssl_crt=$f/server.crt
     ssl_key=$f/server.key
